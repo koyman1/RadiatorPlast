@@ -1,0 +1,473 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+	overflow-x: hidden !important;
+	font-family: Roboto, sans-serif;
+	max-width: 100%;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	width: 100% !important;
+}
+.header{
+	width: 100%;
+	background: linear-gradient(to bottom, #1C1C1E, #2F3438);
+}
+.header_logo {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 25px 70px;
+  height: 60px;
+  overflow: hidden;
+}
+.header_logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  margin-right: 20px;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+.header_menu {
+  display: flex; 
+  overflow: hidden
+}
+.header_menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  margin-left: 20px; 
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+.header_logo a:hover {
+  color: #E63946; 
+  border-bottom: 2px solid #E63946; 
+}
+.header_logo h1{
+	font-size: 40px;
+	color: white;
+	text-align: left;
+	width: 49%;
+}
+.header_logo img{
+	width: 175px;
+}
+.header_content{
+	width: 100%;
+	height: 550px;
+    padding: 25px 70px;
+    text-align: left;
+	overflow: hidden;
+}
+#header_car{
+	z-index: 2;
+}
+#header_car img{
+	width: 750px;
+	position: absolute;
+	right: 0;
+	overflow: hidden;
+}
+@keyframes CarAnim {
+  0% {
+    right: -20%;
+    opacity: 30%;
+  }
+  100% {
+  	opacity: 100%;
+  }
+}
+.hcontent{
+	position: relative;
+	width: 50%;
+	height: 400px;
+	display: inline-block;
+	text-align: left;
+	vertical-align: top;
+	z-index: 1;
+	top: 13%;
+	animation: HcontentAnim 0.9s;
+	overflow: hidden;
+}
+@keyframes HcontentAnim {
+  0% {
+    opacity: 5%;
+    transform: translateY(-20%); 
+  }
+  100% {
+  	opacity: 100%;
+  	transform: translateY(0%); 
+  }
+}
+.hcontent p{
+	color: white;
+	padding: 10px 0 ;
+}
+.hcontent h1{
+	color: white;
+	font-size: 40px;
+	font-weight: 600;
+	padding: 10px 0 ;
+}
+#header_contact {
+	display: flex;
+	padding: 20px 0;
+}
+#header_contact a{
+	color: #E63946;
+	text-align: center;
+	width: 175px;
+	padding: 10px;
+	border: 2px solid #E63946;
+	font-weight: 300;
+	margin-right: 20px;
+}
+/*Блок чому ми*/
+.why_chose_us {
+    width: 100%;
+    background-color: white;
+    box-sizing: border-box;
+    text-align: center;
+    overflow: hidden;
+}
+.why_chose_us h1{
+	font-size: 40px;
+	font-weight: 800;
+}
+.why_chose_us_item {
+    display: inline-block;
+    width: 25%;
+    margin: 50px;
+    text-align: center;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+.why_chose_us_item img {
+    width: 50px;
+    height: 50px;
+}
+.why_chose_us_item h1 {
+    font-size: 2em;
+    margin: 10px 0;
+}
+.why_chose_us_item p {
+    font-size: 1.2em;
+    margin: 0;
+}
+/*Блок статистики*/
+.our_stats{
+	width: 100%;
+	height: 300px auto;
+	background: linear-gradient(to top, #1C1C1E, #2F3438);
+	margin-top: -5px;
+	text-align: center;
+	padding: 10px;
+	overflow: hidden;
+}
+.RemPerDay{
+	max-width: 550px;
+	display: inline-block;
+	text-align: center;
+	height: 100%;
+	justify-content: space-between;
+	vertical-align: middle;
+	padding: 40px;
+	vertical-align: top;
+}
+.our_stats.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animated-number {
+    color: #E63946;
+	font-size: 70px;
+	font-weight: 800;
+    margin: 0;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animated-number.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.fade-in-text {
+    color: white;
+	border-top: 2px solid #666666;
+	padding: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-text.visible {
+	color: white;
+	border-top: 3px solid #666666;
+    opacity: 1;
+    transform: translateY(0);
+}
+/*Блок кузовного ремонту*/
+.body_repair{
+	width: 100%;
+	height: auto;
+	padding: 25px 70px;
+	overflow: hidden;
+}
+.body_repair_photo{
+	width: 850px;
+	display: inline-block;
+	text-align: right;
+	padding: 75px 0px;
+}
+.body_repair_photo img{
+	max-width: 500px;
+	height: auto;
+}
+.body_repair_text{
+	width: 800px;
+	display: inline-block;
+	vertical-align: top;
+	background-repeat: no-repeat;
+	padding: 75px 0 ;
+}
+#body_repair_left_photo{
+	text-align: left;
+	padding: 75px 0;
+	width: 850px;
+	display: inline-block;
+}
+.body_repair_left_photo{
+	text-align: left;
+	padding: 75px 0;
+	width: 850px;
+}
+.body_repair_left_photo img{
+	max-width: 500px;
+	height: auto;
+}
+.body_repair_left_photo1,
+#body_repair_left_photo1 {
+	display: none;
+}
+.body_repair_left_photo1 img{
+	max-width: 500px;
+	height: auto;
+}
+.body_repair h1{
+	font-size: 40px;
+	font-weight: 800;
+	text-align: left;
+}
+.body_repair_text li{
+	text-align: left;
+	line-height: 2em;
+	font-size: 22px;
+}
+.body_repair_text p{
+	font-size: 28px;
+	text-align: left;
+	font-weight: 800;
+}
+/*Контакти*/
+.contact{
+	width: 100%;
+	padding: 25px 70px;
+	background: linear-gradient(to bottom, #1C1C1E, #2F3438);
+	overflow: hidden;
+}
+.contact h1{
+	font-size: 40px;
+	font-weight: 800;
+	color: white;
+}
+.contact form{
+	width: 900px;
+	display: inline-block;
+	vertical-align: top;
+	text-align: left;
+}
+.contact input{
+	width: 350px;
+	padding: 10px;
+	margin: 10px 0;
+}
+.contact textarea{
+	width: 350px;
+	height: 120px;
+	font-size: 18px;
+	padding: 10px;
+}
+.contact button{
+	width: 350px;
+	padding: 15px;
+	border: 0;
+	background-color: #E63946;
+	font-size: 18px;
+	font-weight: 600;
+	cursor: pointer;
+	color: white;
+}
+.contact iframe{
+	display: inline-block;
+	text-align: right;
+}
+/*Футер*/
+.footer {
+	width: 100%;
+	background: linear-gradient(to top, #1C1C1E, #2F3438);
+	text-align: left;
+	padding: 25px 70px;
+	position: relative;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.footer_text {
+	width: 500px;
+	text-align: left;
+	display: inline-block;
+	vertical-align: top;
+}
+.footer_text a, .footer_text p {
+	color: white;
+	font-size: 17px;
+	text-align: left;
+	line-height: 1.5em;
+}
+.footer img {
+	width: 175px;
+	display: block;
+	margin: 0;
+}
+@media (max-width:767px){
+.why_chose_us_text {
+    width: 100%;
+    box-sizing: border-box;
+}
+.why_chose_us_photo {
+    width: 100%;
+    box-sizing: border-box;
+}
+.why_chose_us_photo img{
+    display: none;
+}
+.why_chose_us_item{
+    width: 95%;
+}
+.header {
+    padding: 10px 0;
+    background-size: auto;
+}
+.header_logo {
+    text-align: center;
+    width: 100%;
+    display: block;
+    padding: 20px 0;
+}
+.header_logo a {
+    margin-right: 0;
+}
+#header_contact {
+    display: block;
+}
+#header_contact a {
+    width: 275px;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid #E63946;
+}
+#header_car img {
+    width: 100%;
+    max-width: 550px;
+    left: 65%;
+    top: 40%;
+}
+.hcontent {
+    width: 90%;
+    top: 0;
+    height: auto;
+}
+.hcontent p{
+	margin-top: .5em;
+}
+.header_content {
+    height: 620px;
+    padding: 15px 20px;
+}
+.header_menu a {
+    text-align: center;
+}
+.body_repair{
+	padding: 15px 20px;
+}
+.body_repair_text{
+	width: 95%;
+}
+.body_repair_left_photo img{
+	display: none;
+}
+.body_repair_photo img{
+	width: 100%;
+}
+.body_repair_photo{
+	text-align: center;
+	width: 95%;
+}
+.body_repair_left_photo1{
+	text-align: center;
+	width: 95%;
+}
+.body_repair_left_photo1,
+#body_repair_left_photo1 {
+	display: inline-block;
+}
+.body_repair_left_photo1 img{
+	width: 100%;
+	margin: 0 0 50px 0;
+}
+#body_repair_left_photo {
+    width: 0px;
+}
+.body_repair_left_photo {
+    width: 0px;
+}
+.contact{
+	padding: 15px 20px;
+}
+.footer{
+	padding: 15px 20px;
+}
+.why_chose_us{
+	padding: 15px 20px;
+}
+.why_chose_us_item{
+	margin: 50px 0;
+}
+.contact iframe{
+	width: 90%;
+}
+.contact form{
+	width: 90%;
+	margin: 0 0 50px 0;
+}
+@keyframes CarAnim {
+    0% {
+        left: 95%;
+        opacity: 0.3;
+        display: block;
+    }
+    100% {
+        opacity: 1;
+        left: 35%;
+        display: block;
+    }
+}
+}

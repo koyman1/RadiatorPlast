@@ -63,7 +63,7 @@ body{
 	height: 550px;
     padding: 25px 70px;
     text-align: left;
-	overflow: hidden;
+	overflow-x: hidden;
 }
 #header_car{
 	z-index: 2;

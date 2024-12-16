@@ -439,6 +439,21 @@ body{
 .body_repair_left_photo {
     width: 0px;
 }
+.body_repair h1{
+	font-size: 30px;
+	font-weight: 800;
+	text-align: left;
+}
+.body_repair_text li{
+	text-align: left;
+	line-height: 2em;
+	font-size: 18px;
+}
+.body_repair_text p{
+	font-size: 22px;
+	text-align: left;
+	font-weight: 800;
+}
 .contact{
 	padding: 15px 20px;
 }
@@ -452,7 +467,7 @@ body{
 	margin: 50px 0;
 }
 .contact iframe{
-	width: 90%;
+	width: 80%;
 }
 .contact form{
 	width: 90%;
